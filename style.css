@@ -1,8 +1,31 @@
 header{
-    background-color: rgb(163, 63, 136);
+    background-color: rgb(163, 102, 180);
     width: 100%;
     position: fixed;
     z-index: 999;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   
+  
+}
+nav{
+    padding-right: 200px;
+}
+.logo{
+    text-decoration:none;
+   color: antiquewhite;
+    text-transform: uppercase;
+    font-weight:700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color:cornsilk;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: rgb(179, 50, 102);
 }
