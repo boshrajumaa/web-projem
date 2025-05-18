@@ -80,6 +80,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+ 
 }
 
 .logo{
@@ -108,5 +109,14 @@ header{
 section.main {
    padding-top: 100px;
     background-image: url(/image/pexels-photo-518245.jpeg);
+    height:100vh;
     background-size: cover;
+}
+footer h3 {
+color: rgb(16, 25, 148);
+
+}
+footer a{
+    text-decoration: none;
+    color: rgb(39, 39, 130);
 }
