@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Font Awesome Library -->
+     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="CSS/all.min.css">
     <!-- CSS Dosyaları -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
@@ -14,6 +13,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-    
-              
-    <title>Şehrim</title>
+         <script>
+        fetch("footer.html")
+            .then(response => {
+                return response.text()
+            })
+            .then(data => {
+                document.querySelector("footer").innerHTML = data
+            });
+    </script>
+    <title>şehrim</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="slider">
+            <div class="container">
+                <div class="slider">
+                    <a href="https://www.yenisafak.com/foto-galeri/ozgun/sam-emevi-camii-ne-zaman-yapildi-kim-yaptirdi-4662837/5" target="_blank"> <img src="image/3464c939-emevi-camii-5.jpg" alt="Emevi camii"></a>
+                    <div class="text"> Emevi Camii</div>
+                </div>
+                <div class="slider">
+                    <a href="https://www.trthaber.com/foto-galeri/samdaki-kasiyun-dagi-tarihi-ve-manzarasiyla-buyuluyor/44620.html" target="_blank"> <img src="image/1792651.jpg" alt="kasyun Dağı"></a>
+                    <div class="text">kasyun dağı</div>
+                </div>
+                <div class="slider">
+                    <a href="https://www.gzt.com/mecra/yeryuzundeki-cennet-geleneksel-sam-evinin-sirlari-3684894" target="_blank"> <img src="image/resized_680a1-cee8df912.jpg" alt="eski şam evleri"></a>
+                    <div class="text">Eski şam evleri</div>
+                </div>
+                <div class="slider"> <a href="https://tr.wikipedia.org/wiki/Hamidiye_%C3%87ar%C5%9F%C4%B1s%C4%B1_(%C5%9Eam)" target="_blank"> <img src="image/Al-Hamidiyah_Souq_02.jpg" alt=" Hamidiye Çarşısı"></a>
+                    <div class="text"> Hamidiye Çarşısı</div>
+                </div>
+                <div class="slider">
+                    <a href="https://tr.wikipedia.org/wiki/Barada_Nehri" target="_blank"> <img src="image/Barada_river_in_Damascus_(April_2009).jpg" alt="Barada Nehri"></a>
+                    <div class="text">Barada Nehri</div>
+                </div>
+                  <a class="onceki" onclick="artiSlides(-1)">&#10094;</a>
+                <a class="sonraki" onclick="artiSlides(1)">&#10095;</a>
+            </div>
+        </section>
+    </main>
+     <footer></footer>
+    <script src="JS/bootstrap.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function artiSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
