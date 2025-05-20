@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <script>
+         fetch("header.html")
+            .then(response => {
+                return response.text()
+            })
+            .then(data => {
+                document.querySelector("header").innerHTML = data
+            });
         fetch("footer.html")
             .then(response => {
                 return response.text()
@@ -19,37 +26,7 @@
 
 </head>
 <body>
-   <header>
-     <div class="container">
-      <nav class="navbar navbar-expand-lg">
-         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand logo" href="#">bushra jumaa</a>
-            <div class="collapse navbar-collapse navigation" id="navbarNavAltMarkup">
-               <a class="nav-link active" aria-current="page" href="login.html">Login</a>
-               <a class="nav-link" href="hakkinda.html">Hakkında</a>
-               <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
-               <a class="nav-link" href="sehrim.html">Şehrim</a>
-               <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
-               <a class="nav-link" href="ilgialanlarim.html">İlgiAlanlarım</a>
-               
-               
-            </div>
-         </nav>
-         <!-- <a href="#" class="logo">bushra jumaa</a>
-      </div>
-      <nav class="navigation">
-         <a href ="#services">Login</a>
-         <a href="#services">Hakkında</a>
-         <a href="#services">Özgeçmiş</a>
-         <a href="#services">Şehrim</a>
-         <a href="#services">Mirasımız</a>
-         <a href="#services">İlgiAlanlarım</a>
-      </nav> -->
-     </div>
-   </header>
+   <header></header>
    <section class="main">
      <div class="container">
          <h2 >Selam ismim büşra <br> <span>kod yazarken zaman durur</span> </h2>
