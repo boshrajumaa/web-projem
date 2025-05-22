@@ -123,7 +123,8 @@ footer a{
 .container .filmler{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    padding-top: 100px;
+    padding-top: 30px;
+    gap: 20px;
 
 }
 
@@ -136,7 +137,18 @@ footer a{
     width: 100%;
     border-radius: 10px 10px 0 0;
 }
-
+.ilgi-alan-sayfa .container button{
+   
+     position: relative;
+     margin: 25px auto;
+     color: white;
+     background-color: #1e64dd;
+     padding: 4px 12px;
+     border: none;
+     border-radius: 6px;
+     left: 40%;
+     transform: (-50%);
+}
  .wrapper{
       margin:0;
    padding-top:0;
@@ -214,7 +226,12 @@ footer a{
 .call h2{
     padding-top: 70px;
 }
-.about h1{
+
+.about {
+    background: url(/image/images\ \(2\).jpeg);
+     min-height: 100vh;
+}
+.about .bil{
     padding-top: 70px;
 }
 .call {
@@ -225,9 +242,18 @@ footer a{
     padding-left: 50px;
    
 }
-.about{
+
+.bil {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.heritage{
     background: url(/image/images\ \(2\).jpeg);
 
+    
 }
 .town h1{
     padding-top:80px;
@@ -267,5 +293,37 @@ footer a{
 .vila img{
      position: absolute; right: 10px;
    padding-left: 150px;
-    }
 
+   padding-bottom: 400px;
+   width: 400;
+    }
+.build h2{
+    padding-top: 150px;
+    padding-left: 100px;
+    
+}
+.build img{
+    
+    padding-top: 100px;
+     position: absolute; right: 10px;
+     padding-top: 150px;
+}
+.build h3{
+padding-left: 100px;
+}
+.food img{
+      position: absolute; right: 5px;
+    width: 400px;
+    padding-top: 70px;
+}
+.food h2{
+    padding-left: 100px;
+    padding-top: 50px;
+}
+.food h3{
+    padding-left: 100px;
+}
+.container h1{
+    padding-top:70px;
+   
+}

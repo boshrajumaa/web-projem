@@ -53,7 +53,7 @@ echo "<p><strong>Gizli Kod:</strong> $gizli_kod</p>";
 if (isset($_FILES["dosya"]) && $_FILES["dosya"]["error"] == 0) {
     $dosyaAdi = $_FILES["dosya"]["name"];
     $geciciYol = $_FILES["dosya"]["tmp_name"];
-    $hedefYol = "uploads/" . basename($dosyaAdi);
+    $hedefYol = "uploads/" . basename($dosyaAdi); 
 
     // uploads klasörü yoksa oluştur
     if (!is_dir("uploads")) {

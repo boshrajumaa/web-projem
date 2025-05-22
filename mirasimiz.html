@@ -36,6 +36,7 @@
     <title>Mirasımız</title>
 </head>
 <body>
+    <header></header>
     <div class="heritage">
         <div class="town"><h1> <strong>Suriye'nin Mirası</strong></h1>
         </div>
@@ -63,9 +64,42 @@
     </div>
     <div class="vila" >
         <h2> <strong>Dini Miras</strong> </h2>
+         <img src="image/download (3).jpeg" width="" alt="Emevi camii">
         <h3>Emevi Camii, Suriye’nin başkenti Şam’da bulunan <br> ve İslam tarihinin en önemli ve en eski camilerinden biridir. <br> Aynı zamanda "Şam Ulu Camii" olarak da bilinir.</h3>
-        <img src="image/shutterstock_709817014.webp" alt="Emevi camii">
+       
+        
+    </div>
+    <div class="build">
+         <img src="image/download (4).jpeg " width="400" alt="Halit bin velit camii">
+        <h2> <strong>Halid Bin Velid Camii</strong></h2>
+        <h3>Halkın Sidi Halid Camii olarak andığı Halid Bin Velid Camii <br>, Humus’un en önemli tarihî eserlerindendir. <br> Bugünkü cami 19. yüzyılda Osmanlı mimari tarzında yapılmıştır. 7. yüzyılda <br> İslam ordularının başında Suriye topraklarını fetheden komutan <br> Halid Bin Velid’e adanmış <br> 13. yüzyıl eseri olan bir Memlük camisinin yerine inşa edildiği için <br> aynı isimle anılmıştır <br>. Halid Bin Velid'in türbesine de ev sahipliği yapan geniş bir ibadet <br> salonuna sahip caminin <br> İslam eserleri müzesi olarak kullanılan bir bölümü de vardır.</h3>
+    </div>
+    <div class="food">
+        <img src="image/s9bz-listing.jpg"  alt="Felafil">
+        <h2> <strong>Gastronomi Mirası</strong></h2>
+        <h3>Falafel, Orta Doğu mutfağında (özellikle Lübnan ve Suriye mutfaklarında) <br> nohut, bakla veya her ikisinin birlikte top veya köfte şekline getirilip derin <br> yağda kızartılmasıyla yapılan yemek. Genellikle pita, somun ekmek veya <br> tabun ekmeği içinde servis edilir.</h3>
     </div>
     </div>
-<header></header>
+
+<footer></footer>
+    <script src="JS/bootstrap.js"></script>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function artiSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
