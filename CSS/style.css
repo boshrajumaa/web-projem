@@ -125,7 +125,6 @@ footer a{
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     padding-top: 30px;
     gap: 20px;
-
 }
 
 .container .filmler figure {
@@ -148,6 +147,9 @@ footer a{
      border-radius: 6px;
      left: 40%;
      transform: (-50%);
+}
+.ilgi-alan-sayfa h1{
+    padding-top: 80px;
 }
  .wrapper{
       margin:0;
@@ -227,35 +229,46 @@ footer a{
     padding-top: 70px;
 }
 
-.about {
-    background: url(/image/images\ \(2\).jpeg);
-     min-height: 100vh;
-}
-.about .bil{
-    padding-top: 70px;
-}
+
 .call {
     background: url(/image/images\ \(2\).jpeg);
     width: 100%;
 }
 .call h2{
     padding-left: 50px;
-   
 }
+
+.about{
+    padding-top: 70px;
+    background: url(/image/images\ \(2\).jpeg);
+    
+}
+.hob{
+   text-align: center;
+   padding-top: 40px;
+}
+.container.ileti ul{
+    display: grid;
+    gap: 20px;
+}
+.container.ileti i{
+    padding-right: 10px;
+}
+.container.ileti a{
+    padding-left: 30px;
+}
+
 
 .bil {
     display: flex;
     align-items: center;
 }
-
-
-
 .heritage{
     background: url(/image/images\ \(2\).jpeg);
 
     
 }
-.town h1{
+.container.mir h1{
     padding-top:80px;
     text-align: center;
 
@@ -314,7 +327,8 @@ padding-left: 100px;
 .food img{
       position: absolute; right: 5px;
     width: 400px;
-    padding-top: 70px;
+    padding-top: 50px;
+    padding-bottom: 100px;
 }
 .food h2{
     padding-left: 100px;
@@ -323,7 +337,37 @@ padding-left: 100px;
 .food h3{
     padding-left: 100px;
 }
-.container h1{
-    padding-top:70px;
-   
+.container .slide img{
+  padding-top: 80px;
+    width: 100%;
+    height: 100%;
+    border-radius:20%;
+}
+.slide .text{
+       color: white;
+    font-size: 18px;
+    position: absolute;
+   bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider .container .onceki
+{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    width: auto;
+    padding: 50px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.slider .container .sonraki {
+    right: 10px;
+    border-radius: 3px 0 0 3px;
+    
 }
