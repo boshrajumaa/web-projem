@@ -9,7 +9,7 @@ $password = $_POST['password'];
 
 // Bilgileri kontrol et
 if ($email == $dogruKullaniciAdi && $password == $dogruSifre) {
-    echo "Hoşgeldiniz b221210552" . htmlspecialchars($password);
+    echo "Hoşgeldiniz b221210552";
 } else {
     // Başarısızsa tekrar giriş sayfasına yönlendir
     header("Location:../login.html");

@@ -111,7 +111,6 @@ footer {
     color: white;
         text-align: center;
         padding: 20px 0;
-        margin-top: 40px;
 }
 
 footer a{
@@ -531,6 +530,20 @@ body.bcs-body {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.bcs-yetenekler .bcs-container .bcs-yetenekler-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+    .bcs-yetenekler .bcs-container .bcs-yetenekler-content {
+            flex-direction: column;
+            align-items: center;
+        }
+    .bcs-yetenekler .bcs-container .bcs-yetenekler-content .bcs-box:not(:last-child) {
+        margin-bottom: 30px;
+    }
 }
 
 .bcs-yetenekler .bcs-box img {
