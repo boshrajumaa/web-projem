@@ -1,44 +1,73 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-   <meta http-equiv= x-ua-compatible content=" ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bushrajumaa</title>
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <script>
-         fetch("header.html")
-            .then(response => {
-                return response.text()
-            })
-            .then(data => {
-                document.querySelector("header").innerHTML = data
-            });
-        fetch("footer.html")
-            .then(response => {
-                return response.text()
-            })
-            .then(data => {
-                document.querySelector("footer").innerHTML = data
-            });
-    </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Büşra Jumaa | Kişisel Sayfa</title>
 
+  <!-- Stil Dosyaları -->
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Header/Footer -->
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => { document.querySelector("header").innerHTML = data; });
+
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => { document.querySelector("footer").innerHTML = data; });
+  </script>
 </head>
-<body>
-   <header></header>
-   <section class="main">
-     <div class="container">
-         <h2 >Selam ismim büşra <br> <span>kod yazarken zaman durur</span> </h2>
-         <h3>Sakarya üniversitesi Bilgisayar Mühendisliği Bölümü Öğrencisiyim</h3>
-      </div>
-      <img src="image/coder girl.jpg" width="300">
-       <footer></footer>
 
-   </section>
-  
-   <script src="JS/bootstrap.js"></script>
- 
-   
+<body>
+  <div class="personal-site">
+    <header></header>
+    
+    <!-- Giriş Alanı -->
+    <section class="hero-section">
+      <div class="hero-wrapper">
+        <div class="hero-image">
+          <img src="image/coder girl.jpg" alt="Büşra coder">
+        </div>
+        <div class="hero-content">
+          <h2>Selam ismim Büşra<br><span>Kod yazarken zaman durur</span></h2>
+          <h3>Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisiyim</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hakkımda ve Hobiler -->
+    <section class="about-section">
+      <div class="about-wrapper">
+        <h1>Sayfama Hoş Geldiniz</h1>
+         <p>2000 yılında Suriye'nin Şam şehrinde doğdum . <br>
+            savaş nedeniyle 2012 yılında Türkiye'ye geldim ve Hatay'da ikamet ettim <br> .2017 yılında Kocaeli'ye taşındım .2020 yılında Liseyi birincilikle bitirdim. <br> Ardından çalışıp üniversite sınavına hazırlandım. 2022 yılında bilgisayar mühendisliği bölümüne yerleştim. <br> mezun olmama bir yıl kaldı.
+Dil öğrenmeyi çok severim. Türkçe dilini ana dilim olan Arapça gibi biliyorum.</p>
+        <h2>Hobilerim</h2>
+        <ul class="hobby-list">
+          <li>Basketbol <img src="image/images.jpeg" alt="basketbol"></li>
+          <li>Satranç <img src="image/download.jpeg" alt="satranç"></li>
+          <li>Kitap Okumak <img src="image/download (1).jpeg" alt="kitap"></li>
+          <li>Yüzmek <img src="image/yuzmek.jpeg" alt="yüzmek"></li>
+        </ul>
+
+        <a class="youtube-link" href="https://www.youtube.com/@Mathlearning_sy" target="_blank">
+          <i class="fa-brands fa-youtube"></i> YouTube Kanalım
+        </a>
+      </div>
+    </section>
+
+  </div>
+ <footer></footer>
+  <script src="JS/bootstrap.js"></script>
 </body>
 </html>

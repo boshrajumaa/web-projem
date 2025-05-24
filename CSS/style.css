@@ -33,12 +33,6 @@
     }
 }
 
-.container {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: auto;
-    margin-right: auto;
-}
 
 /* Small */
 @media (min-width: 576px) {
@@ -108,18 +102,43 @@ header{
 
 section.main {
    padding-top: 100px;
-    background-image: url(/image/pexels-photo-518245.jpeg);
+    background-image: url(../image/pexels-photo-518245.jpeg);
     height:100vh;
     background-size: cover;
 }
-footer h3 {
-color: rgb(16, 25, 148);
-
+footer {
+    background-color: rgb(179, 155, 113);
+    color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 40px;
 }
+
 footer a{
     text-decoration: none;
     color: rgb(39, 39, 130);
+    font-size:30px;
+    padding: 0 15px;
+    
 }
+footer .container  {
+    display: flex; flex-direction: column;
+    flex-direction: column;
+}
+footer .container p{
+    color: #faebd7;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        border-top: 1px solid var(--placeholder-border-renk);
+    }
+footer .container .box h3 {
+font-size: 42px;
+color: #faebd7;
+font-weight: 1000;
+letter-spacing: 1px;
+}
+
 .container .filmler{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -160,7 +179,7 @@ footer a{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/image/images\ \(2\).jpeg)
+    background: url(../image/images\ \(2\).jpeg)
 }
  .wrapper .form{
     width: 420px;
@@ -219,155 +238,609 @@ footer a{
     font-weight: 600;
     margin: 20px 0 15px;
 }
-.info{
-    padding-top:70px;
-}
-.tanit .img{
-    justify-content: center;
-}
-.call h2{
-    padding-top: 70px;
-}
 
 
-.call {
-    background: url(/image/images\ \(2\).jpeg);
-    width: 100%;
-}
-.call h2{
-    padding-left: 50px;
-}
 
-.about{
-    padding-top: 70px;
-    background: url(/image/images\ \(2\).jpeg);
-    
-}
-.hob{
-   text-align: center;
-   padding-top: 40px;
-}
-.container.ileti ul{
-    display: grid;
-    gap: 20px;
-}
-.container.ileti i{
-    padding-right: 10px;
-}
-.container.ileti a{
-    padding-left: 30px;
-}
-
-
-.bil {
-    display: flex;
-    align-items: center;
-}
-.heritage{
-    background: url(/image/images\ \(2\).jpeg);
-
-    
-}
-.container.mir h1{
-    padding-top:80px;
-    text-align: center;
-
-}
-.impo img{ 
-  position: absolute; right: 10px;
-  padding-top: 150px;
-
-} 
-.impo h2{
-   text-align: center;
-    padding-top: 40px;
-}
-.impo h3{
-    padding-top: 60px;
-    padding-left: 150px;
-}
-.country img{
-    position: absolute; right: 10px;
-    padding-bottom:50px;
-    padding-top: 70px;
-}
-.country h3{
-    padding-top: 60px;
-    padding-left: 130px;
-}
-.vila h2{
-    padding-top: 200px;
-    padding-left: 75px;
-}
-.vila h3{
-    padding-left: 100px;
-    padding-top: 50px;
-}
-.vila img{
-     position: absolute; right: 10px;
-   padding-left: 150px;
-
-   padding-bottom: 400px;
-   width: 400;
+/* Genel Sayfa Ayarları yani index */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+        color: #212529;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
     }
-.build h2{
-    padding-top: 150px;
-    padding-left: 100px;
-    
+
+    h1,
+    h2,
+    h3 {
+        font-weight: 600;
+        color: #343a40;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    /* Başlıklar */
+    .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* Özel Bölüm Stilleri */
+    .heritage-section .heritage-content {
+        margin-bottom: 40px;
+    }
+
+    .heritage-section h3 {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .heritage-image {
+        margin-bottom: 20px;
+    }
+
+    /* Gastronomi */
+    .food-section {
+        background-color: #fff3cd;
+        border-radius: 12px;
+        padding: 40px 20px;
+        margin-bottom: 40px;
+    }
+
+    /* Geleneksel Dans */
+    .traditional-section {
+        background-color: #e2e3e5;
+        border-radius: 12px;
+        padding: 40px 20px;
+    }
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .heritage-section h2 {
+            font-size: 24px;
+        }
+
+        .heritage-section h3 {
+            font-size: 16px;
+        }
+
+        section {
+            padding: 40px 15px;
+        }
+    }
+/* Slider Genel Yapı */
+.slider {
+    margin-top: 80px;
 }
-.build img{
-    
-    padding-top: 100px;
-     position: absolute; right: 10px;
-     padding-top: 150px;
+
+.slider .container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
 }
-.build h3{
-padding-left: 100px;
-}
-.food img{
-      position: absolute; right: 5px;
-    width: 400px;
-    padding-top: 50px;
-    padding-bottom: 100px;
-}
-.food h2{
-    padding-left: 100px;
-    padding-top: 50px;
-}
-.food h3{
-    padding-left: 100px;
-}
-.container .slide img{
-  padding-top: 80px;
+
+/* Slider Görseli */
+.container .slide img {
     width: 100%;
-    height: 100%;
-    border-radius:20%;
+    height: 650px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
 }
-.slide .text{
-       color: white;
-    font-size: 18px;
+
+/* Metin Üzerinde */
+.slide .text {
     position: absolute;
-   bottom: 0;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Arka plan netlik */
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 80%;
 }
-.slider .container .onceki
-{
-    cursor: pointer;
-    position: absolute;
-    top: 45%;
-    width: auto;
-    padding: 50px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6 ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
+
+/* Önceki/Sonraki Butonlar */
+.slider .container .onceki,
 .slider .container .sonraki {
-    right: 10px;
-    border-radius: 3px 0 0 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.slider .container .onceki:hover,
+.slider .container .sonraki:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slider .container .onceki {
+    left: 20px;
+}
+
+.slider .container .sonraki {
+    right: 20px;
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+    .container .slide img {
+        height: 400px;
+    }
+
+    .slide .text {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .slider .container .onceki,
+    .slider .container .sonraki {
+        font-size: 20px;
+        padding: 12px;
+    }
+}
+body{
+    font-family: "Poppins", sans-serif !important;
+}
+/* Ana sayfa özel CSS - bcs- ile başlayan sınıflar bu sayfa içindir */
+
+body.bcs-body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.bcs-tanit .bcs-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.bcs-tanit {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+
+.bcs-tanit .bcs-info {
+    flex: 1 1 55%;
+    padding-top: 20px;
+}
+
+.bcs-tanit .bcs-info h1 {
+    font-size: 2.8rem;
+    color: #7d5c01;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bcs-tanit .bcs-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+}
+.bcs-tanit .bcs-img {
+    padding-top: 50px;
+    flex: 1 1 35%;
+    text-align: right;
+}
+
+.bcs-tanit .bcs-img img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.bcs-iletisim-diller {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bcs-iletisim,
+.bcs-diller {
+    flex: 1 1 45%;
+    margin: 20px;
+}
+
+.bcs-ana-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+.bcs-iletisim div,
+.bcs-diller p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.bcs-egitim {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.bcs-egitim .bcs-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bcs-egitim .bcs-box {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bcs-yetenekler {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.bcs-yetenekler .bcs-contant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bcs-yetenekler .bcs-box {
+    width: 120px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bcs-yetenekler .bcs-box img {
+    width: 60px;
+    height: 60px;
+}
+/* Ana sayfa özel CSS - bcs- ile başlayan sınıflar bu sayfa içindir */
+
+body.bcs-body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.bcs-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.bcs-tanit {
+    background-color: #fff;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bcs-tanit .bcs-info {
+    flex: 1 1 50%;
+    padding: 20px;
+}
+
+.bcs-tanit .bcs-info h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+}
+
+.bcs-tanit .bcs-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.bcs-tanit .bcs-img {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.bcs-tanit .bcs-img img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bcs-iletisim-diller {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bcs-iletisim, .bcs-diller {
+    flex: 1 1 45%;
+    margin: 20px;
+}
+
+.bcs-ana-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+}
+
+.bcs-iletisim div, .bcs-diller p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.bcs-egitim {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.bcs-egitim .bcs-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bcs-egitim .bcs-box {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 45%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bcs-yetenekler {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+.bcs-yetenekler .bcs-contant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bcs-yetenekler .bcs-box {
+    width: 120px;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bcs-yetenekler .bcs-box img {
+    width: 60px;
+    height: 60px;
+}
+
+
+@media (max-width: 768px) {
+    .bcs-tanit, .bcs-iletisim-diller, .bcs-egitim .bcs-info, .bcs-yetenekler .bcs-contant {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bcs-tanit .bcs-info, .bcs-tanit .bcs-img,
+    .bcs-iletisim, .bcs-diller,
+    .bcs-egitim .bcs-box,
+    .bcs-yetenekler .bcs-box {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bcs-tanit,
+    .bcs-iletisim-diller,
+    .bcs-egitim .bcs-info,
+    .bcs-yetenekler .bcs-contant {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bcs-tanit .bcs-info,
+    .bcs-tanit .bcs-img,
+    .bcs-iletisim,
+    .bcs-diller,
+    .bcs-egitim .bcs-box,
+    .bcs-yetenekler .bcs-box {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+/* Scoped stil: sadece .personal-site içindeki öğeleri etkiler */
+.personal-site {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Başlıklar */
+.personal-site h1,
+.personal-site h2,
+.personal-site h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #1e1e2f;
+}
+
+/* Bağlantılar */
+.personal-site a {
+    text-decoration: none;
+}
+
+/* Resimler */
+.personal-site img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Giriş Alanı */
+.personal-site .hero-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.personal-site .hero-wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+
+.personal-site .hero-image img {
     
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.personal-site .hero-content {
+    flex: 1;
+}
+
+.personal-site .hero-content h2 span {
+    color: #6c63ff;
+    font-weight: 700;
+}
+
+/* Hakkımda */
+.personal-site .about-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.personal-site .about-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+/* Hobiler */
+.personal-site .hobby-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.personal-site .hobby-list li {
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-site .hobby-list li img {
+    margin-top: 8px;
+    width: 180px;
+    height: auto;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+}
+
+.personal-site .hobby-list li img:hover {
+    transform: scale(1.05);
+}
+
+/* YouTube */
+.personal-site .youtube-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #dc3545;
+}
+
+.personal-site .youtube-link i {
+    margin-right: 8px;
+    font-size: 24px;
+}
+
+/* Footer */
+.personal-site footer {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .personal-site .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .personal-site .hero-content h2 {
+        font-size: 26px;
+    }
+
+    .personal-site .hero-content h3 {
+        font-size: 18px;
+    }
+
+    .personal-site .hobby-list li {
+        align-items: center;
+    }
 }

@@ -69,5 +69,5 @@ if (isset($_FILES["dosya"]) && $_FILES["dosya"]["error"] == 0) {
     echo "<p><strong>Dosya yüklenmedi.</strong></p>";
 }
 
-echo '<br><a href="iletisim.html">Forma Geri Dön</a>';
+echo '<br><a href="../iletisim.html">Forma Geri Dön</a>';
 ?>

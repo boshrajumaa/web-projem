@@ -1,96 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirasımız | Suriye'nin Kültürel Zenginliği</title>
 
-     <!-- Font Awesome Library -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="CSS/all.min.css">
-    <!-- CSS Dosyaları -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <!-- Özel Stiller -->
     <link rel="stylesheet" href="CSS/master.css">
     <link rel="stylesheet" href="CSS/style.css">
-    <!--Google font-->
+
+    <!-- Google Font: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-        
-<script>
-         fetch("header.html")
-            .then(response => {
-                return response.text()
-            })
-            .then(data => {
-                document.querySelector("header").innerHTML = data
-            });
-        fetch("footer.html")
-            .then(response => {
-                return response.text()
-            })
-            .then(data => {
-                document.querySelector("footer").innerHTML = data
-            });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <title>Mirasımız</title>
+    <script>
+        // Header ve footer'ı dinamik yükle
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.querySelector("header").innerHTML = data);
+
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => document.querySelector("footer").innerHTML = data);
+    </script>
 </head>
+
 <body>
     <header></header>
-    <div class="heritage">
-        <div class="container-mir"><h1> <strong>Suriye'nin Mirası</strong></h1>
-<div class="impo">
-     <img src="image/temp-75-730x438.jpg" alt="ALHüSN KALESİ"> 
-    <h2>Tarihi ve Arkeolojik Miras</h2>
-    <h3> <strong>Hüsn Kalesi (diğer adıyla Krak des Chevaliers):</strong> <br>
-        Suriye’nin batısında, Humus şehrine yakın, <br> stratejik bir tepe üzerinde yer alır. <br>
-         Diğer Adları:Arapça: (Kalat el-Hısn) <br>Fransızca: Krak des Chevaliers <br>Türkçe anlamı: "Şövalyelerin Kalesi" <br>
-    UNESCO Dünya Mirası Listesi'ne <br>2006 yılında dahil edilmiştir. <br>
- Dünyada en iyi korunmuş Haçlı kalelerinden biri <br> olarak kabul edilir. <br>Askeri mimarinin zirvesi olarak görülür. <br>
-  Suriye'nin kültürel ve tarihi mirasının <br> en değerli örneklerinden biridir.</h3> <br>
-        </div>
-    <div class="country">
-         <img src="image/unnamed.jpg" alt="salahattin kalesi">
-         <h3>
-            <strong>Selahaddin Kalesi:</strong> Lazkiye ilinin doğusunda,<br>
-             ormanlık dağlık bir alanda yer alır. <br>
-           Doğal olarak korunmuş bir kayalık üzerine kurulmuştur. <br>
-           Kale, Bizans dönemine kadar uzanan <br> eski bir yerleşim üzerine inşa edilmiştir.
-           <br> Bizans, Haçlı ve İslam mimarisinin birleşimi görülür. <br> 
-           Doğal kayalıkların içine işlenmiş yapı elemanları <br> dikkat çeker.
-         Kalede yazıtlar ve süslemeler de <br> mevcuttur.
-         </h3>
-    </div>
-    <div class="vila" >
-        <h2> <strong>Dini Miras</strong> </h2>
-         <img src="image/download (3).jpeg" width="" alt="Emevi camii">
-        <h3>Emevi Camii, Suriye’nin başkenti Şam’da bulunan <br> ve İslam tarihinin en önemli ve en eski camilerinden biridir. <br> Aynı zamanda "Şam Ulu Camii" olarak da bilinir.</h3>
-       
-        
-    </div>
-    <div class="build">
-         <img src="image/download (4).jpeg " width="400" alt="Halit bin velit camii">
-        <h2> <strong>Halid Bin Velid Camii</strong></h2>
-        <h3>Halkın Sidi Halid Camii olarak andığı Halid Bin Velid Camii <br>, Humus’un en önemli tarihî eserlerindendir. <br> Bugünkü cami 19. yüzyılda Osmanlı mimari tarzında yapılmıştır. 7. yüzyılda <br> İslam ordularının başında Suriye topraklarını fetheden komutan <br> Halid Bin Velid’e adanmış <br> 13. yüzyıl eseri olan bir Memlük camisinin yerine inşa edildiği için <br> aynı isimle anılmıştır <br>. Halid Bin Velid'in türbesine de ev sahipliği yapan geniş bir ibadet <br> salonuna sahip caminin <br> İslam eserleri müzesi olarak kullanılan bir bölümü de vardır.</h3>
-    </div>
-    <div class="food">
-        <img src="image/s9bz-listing.jpg"  alt="Felafil">
-        <h2> <strong>Gastronomi Mirası</strong></h2>
-        <h3>Falafel, Orta Doğu mutfağında (özellikle Lübnan ve Suriye mutfaklarında) <br> nohut, bakla veya her ikisinin birlikte top veya köfte şekline getirilip derin <br> yağda kızartılmasıyla yapılan yemek. Genellikle pita, somun ekmek veya <br> tabun ekmeği içinde servis edilir.</h3>
-        </div>
-        <hr>
-       <div class="dans">
-        <h2> <strong>Geleneksel Miras</strong>
-        </h2>
-        <img src="image/Alawites_Dance._1880.jpg"> 
-        <h3>Dabke, debke, dabka veya dabkeh Levant olarak bilinen Doğu Akdeniz <br> bölgesindeki Arap nüfus arasında yaygın olan geleneksel halk oyunu. <br> Suriye ve Filistin'in ulusal halk oyunu olmasının yanında ayrıca Irak, Ürdün, <br> Mısır, Türkiye ve Filistin de özellikle düğün ya da kutlamalarda oynanan <br> yaygın bir halk oyunudur</h3>
-       </div>
-    </div>
-    </div>
 
-<footer></footer>
+    <main class="heritage-content py-5">
+        <section class="container heritage-intro mb-5">
+            <h1 class="text-center fw-bold">Suriye'nin Mirası</h1>
+        </section>
+
+        <section class="container heritage-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="image/temp-75-730x438.jpg" alt="Hüsn Kalesi" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Tarihi ve Arkeolojik Miras</h2>
+                    <p><strong>Hüsn Kalesi (Krak des Chevaliers):</strong> Humus'a yakın stratejik bir tepede yer alan bu kale, 2006'da UNESCO Dünya Mirası Listesi'ne alınmıştır. Haçlı mimarisinin zirvesi sayılır ve Şövalyelerin savunma sanatlardaki ustalığını yansıtır.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container heritage-section mb-5">
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="image/unnamed.jpg" alt="Selahaddin Kalesi" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="fw-bold">Selahaddin Kalesi</h3>
+                    <p>Lazkiye ilinin dağlık alanında konumlanan bu kale, Bizans, Haçlı ve İslam mimarilerinin karışımıyla dikkat çeker. Kayalıklara oyulmuş yapılar ve süslemelerle tarihi derinliği yansıtır.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container heritage-section mb-5">
+            <div class="text-center">
+                <h2 class="fw-bold">Dini Miras</h2>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 mb-4">
+                    <img src="image/download (3).jpeg" alt="Emevi Camii" class="img-fluid rounded shadow">
+                    <h4 class="mt-3">Emevi Camii</h4>
+                    <p>Şam'da bulunan bu cami, İslam tarihinin en eski ve en önemli yapılarındandır. Aynı zamanda Şam Ulu Camii olarak da bilinir.</p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <img src="image/download (4).jpeg" alt="Halid Bin Velid Camii" class="img-fluid rounded shadow">
+                    <h4 class="mt-3">Halid Bin Velid Camii</h4>
+                    <p>Humus'ta yer alan bu cami, Osmanlı mimarisiyle 19. yüzyılda inşa edilmiştir. Halid Bin Velid'in türbesini de içermektedir.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container heritage-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="image/s9bz-listing.jpg" alt="Falafel" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold">Gastronomi Mirası</h2>
+                    <p>Falafel, nohut veya bakladan yapılıp derin yağda kızartılan geleneksel bir yemektir. Pita ekmeğiyle birlikte sunulur.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container heritage-section mb-5">
+            <div class="text-center">
+                <h2 class="fw-bold">Geleneksel Miras</h2>
+                <img src="image/Alawites_Dance._1880.jpg" alt="Dabke Dansı" class="img-fluid rounded shadow my-3">
+                <p>Dabke, Suriye, Filistin ve komşu bölgelerde yaygın olan bir halk oyunudur. Düğünlerde ve kutlamalarda topluca oynanır.</p>
+            </div>
+        </section>
+
+        <hr class="container">
+    </main>
+
+    <footer></footer>
+
     <script src="JS/bootstrap.js"></script>
     <script>
+        // Slider fonksiyonları (eğer kullanılıyorsa)
         let slideIndex = 1;
         showSlides(slideIndex);
 
@@ -99,14 +117,16 @@
         }
 
         function showSlides(n) {
-            let i;
             let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
+            if (slides.length === 0) return;
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+            for (let i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "block";
         }
     </script>
 </body>
+
+</html>

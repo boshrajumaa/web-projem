@@ -1,21 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr" ng-app="contactApp">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <!-- CSS Dosyaları -->
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/master.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <!--Google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-<script>
-         fetch("header.html")
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iletişim</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/all.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="stylesheet" href="CSS/iletisim.css">
+  <script>
+          fetch("header.html")
             .then(response => {
                 return response.text()
             })
@@ -29,124 +25,125 @@
             .then(data => {
                 document.querySelector("footer").innerHTML = data
             });
-    </script>
-
-    <title>İletişim</title>
-    <style>
-    body {
-      font-family: Arial, sans-serif;
-      
-      background-color: #f4f4f4;
-    }
-    form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    label {
-      font-weight: bold;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0 15px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    input[type="submit"], input[type="reset"] {
-      width: auto;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      margin-right: 10px;
-      cursor: pointer;
-    }
-    input[type="submit"]:hover, input[type="reset"]:hover {
-      background-color: #0056b3;
-    }
-  </style>
+  </script>
 </head>
-<body>
-    <header></header> 
-    
-<div class="call">
-    <div class="container-cal">
-    <h2>İletişim Formu</h2>
-  <form action="iletisim.php" method="post" enctype="multipart/form-data">
+<body ng-controller="contactController" class="contact-page">
+  <header></header>
+  <div class="container mt-4">
+    <form name="contactForm" ng-submit="submitForm($event)" novalidate action="php/iletisim.php" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="ad">Ad Soyad:</label>
+        <input type="text" id="ad" name="ad" class="form-control" ng-model="formData.ad" required>
+        <small class="text-danger" ng-show="contactForm.ad.$touched && contactForm.ad.$invalid">Ad gerekli.</small>
+      </div>
 
-    <label for="ad">Ad Soyad:</label>
-    <input type="text" id="ad" name="ad" required>
+      <div class="form-group">
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" class="form-control" ng-model="formData.email" required>
+        <small class="text-danger" ng-show="contactForm.email.$touched && contactForm.email.$invalid">Geçerli e-posta gerekli.</small>
+      </div>
 
-    <label for="email">E-posta Adresi:</label>
-    <input type="email" id="email" name="email" required>
+      <div class="form-group">
+        <label for="tel">Telefon Numarası:</label>
+        <input type="tel" id="tel" name="tel" class="form-control" ng-model="formData.tel" ng-pattern="/^\d{11}$/">
+        <small class="text-danger" ng-show="contactForm.tel.$error.pattern">11 haneli numara giriniz.</small>
+      </div>
 
-    <label for="tel">Telefon Numarası:</label>
-    <input type="tel" id="tel" name="tel">
+      <div class="form-group">
+        <label for="konu">Konu:</label>
+        <select id="konu" name="konu" class="form-control" ng-model="formData.konu">
+          <option value="genel">Şikayet</option>
+          <option value="destek">Öneri</option>
+          <option value="teklif">Başka</option>
+        </select>
+      </div>
 
-    <label for="konu">Konu:</label>
-    <select id="konu" name="konu">
-      <option value="genel">Şikayet</option>
-      <option value="destek">Öneri</option>
-      <option value="teklif">Başka</option>
-    </select>
+      <label>Cinsiyet:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="cinsiyet" value="Erkek" ng-model="formData.cinsiyet" required>
+        <label class="form-check-label">Erkek</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="cinsiyet" value="Kadın" ng-model="formData.cinsiyet" required>
+        <label class="form-check-label">Kadın</label>
+      </div>
+      <small class="text-danger d-block" ng-show="contactForm.cinsiyet.$touched && contactForm.cinsiyet.$invalid">Cinsiyet gerekli.</small>
 
-    <label for="cinsiyet">Cinsiyet:</label><br>
-    <input type="radio" name="cinsiyet" value="Erkek" id="erkek"><label for="erkek">Erkek</label>
-    <input type="radio" name="cinsiyet" value="Kadın" id="kadin"><label for="kadin">Kadın</label><br><br>
+      <div class="form-group mt-3">
+        <label>İlgi Alanları:</label><br>
+        <div class="form-check" ng-repeat="hobi in hobiler">
+          <input class="form-check-input" type="checkbox" name="hobi[]" value="{{hobi}}" ng-model="formData.hobi[hobi]">
+          <label class="form-check-label">{{hobi}}</label>
+        </div>
+        <small class="text-danger" ng-show="contactForm.$submitted && !isHobiSelected()">En az bir hobi seçmelisiniz.</small>
+      </div>
 
-    <label for="hobi">İlgi Alanları:</label><br>
-    <input type="checkbox" name="hobi[]" value="Yapay Zeka"> Yapay Zeka
-    <input type="checkbox" name="hobi[]" value="Kodlama"> Kodlama
-    <input type="checkbox" name="hobi[]" value="IQ Soruları"> IQ Soruları
-    <input type="checkbox" name="hobi[]" value="Web Tasarımı"> Web Tasarımı
-    <br><br>
+      <div class="form-group">
+        <label for="mesaj">Mesajınız:</label>
+        <textarea id="mesaj" name="mesaj" class="form-control" rows="5" ng-model="formData.mesaj" required></textarea>
+        <small class="text-danger" ng-show="contactForm.mesaj.$touched && contactForm.mesaj.$invalid">Mesaj gerekli.</small>
+      </div>
 
-    <label for="mesaj">Mesajınız:</label>
-    <textarea id="mesaj" name="mesaj" rows="5"></textarea>
+      <div class="form-group">
+        <label for="tarih">Tarih Seçin:</label>
+        <input type="date" id="tarih" name="tarih" class="form-control" ng-model="formData.tarih">
+      </div>
 
-    <label for="tarih">Tarih Seçin:</label>
-    <input type="date" id="tarih" name="tarih">
+      <div class="form-group">
+        <label for="renk">Favori Renk:</label>
+        <input type="color" id="renk" name="renk" class="form-control" ng-model="formData.renk">
+      </div>
 
-    <label for="renk">Favori Renk:</label>
-    <input type="color" id="renk" name="renk">
+      <div class="form-group">
+        <label for="dosya">Dosya Yükle:</label>
+        <input type="file" id="dosya" name="dosya" class="form-control-file">
+      </div>
 
-    <label for="dosya">Dosya Yükle:</label>
-    <input type="file" id="dosya" name="dosya">
+      <input type="hidden" name="gizli_kod" value="123abc">
 
-    <input type="hidden" name="gizli_kod" value="123abc">
+      <div class="form-group">
+        <label for="seviye">Memnuniyet Seviyesi:</label>
+        <input type="range" id="seviye" name="seviye" min="0" max="10" ng-model="formData.seviye" class="form-control">
+      </div>
 
-    <label for="seviye">Memnuniyet Seviyesi:</label>
-    <input type="range" id="seviye" name="seviye" min="0" max="10">
-
-    <br><br>
-    <input type="submit" value="Gönder">
-    <input type="reset" value="Temizle">
-  </form>
-  </div>
+      <button type="submit" class="btn btn-primary">Gönder</button>
+      <button type="reset" class="btn btn-secondary" ng-click="resetForm()">Temizle</button>
+      <button type="button" class="btn btn-success" ng-click="quickSubmit()">JS Kontrolü</button>
+    </form>
   </div>
   <footer></footer>
+  <script>
+    var app = angular.module('contactApp', []);
+    app.controller('contactController', function ($scope) {
+      $scope.formData = {};
+      $scope.hobiler = ["Yapay Zeka", "Kodlama", "IQ Soruları", "Web Tasarımı"];
+
+      $scope.isHobiSelected = function () {
+        return Object.values($scope.formData.hobi || {}).some(Boolean);
+      };
+
+      $scope.submitForm = function (event) {
+        if ($scope.contactForm.$valid && $scope.isHobiSelected()) {
+        } else {
+          event.preventDefault();
+        }
+      };
+
+      $scope.quickSubmit = function () {
+        if ($scope.contactForm.$valid && $scope.isHobiSelected()) {
+          document.contactForm.submit();
+        } else {
+          alert('Form eksik ya da hatalı!');
+        }
+      };
+
+      $scope.resetForm = function () {
+        $scope.formData = {};
+        $scope.contactForm.$setPristine();
+        $scope.contactForm.$setUntouched();
+      };
+    });
+  </script>
   <script src="JS/bootstrap.js"></script>
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function artiSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("slide");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slides[slideIndex - 1].style.display = "block";
-        }
-    </script>
 </body>
+</html>
